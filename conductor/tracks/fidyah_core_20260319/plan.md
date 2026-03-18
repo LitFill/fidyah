@@ -1,1 +1,23 @@
-# Implementation Plan: Core Fidyah Calculator\n\n## Phase 1: Project Foundation [checkpoint: 1d4e302]\n- [x] Task: Set up HTML structure with Tailwind CDN (8e4aa86)\n- [x] Task: Design the basic calculator layout (input fields for days and years) (53d9056)\n- [x] Task: Conductor - User Manual Verification 'Phase 1: Project Foundation' (Protocol in workflow.md) (1d4e302)\n\n## Phase 2: Core Logic Implementation\n- [x] Task: Implement basic fidyah calculation (Days x 1 Mudd) (32c95e6)\n- [x] Task: Implement Syafii multi-year doubling logic (Days x Years x 1 Mudd) (ea2d25d)\n- [x] Task: Add weight conversion logic (Multi-Qoul: 0.675kg, 0.75kg, 0.8kg) (adb656b)\n- [x] Task: Implement cost estimation based on user-provided price per kg (cf1ce63)\n- [ ] Task: Conductor - User Manual Verification 'Phase 2: Core Logic Implementation' (Protocol in workflow.md)\n\n## Phase 3: UI Refinement & Educational Content\n- [ ] Task: Add educational explanations (dalil) for each calculation step\n- [ ] Task: Implement accessibility features (large fonts, high contrast mode)\n- [ ] Task: Final responsive design tweaks and share/download result functionality\n- [ ] Task: Conductor - User Manual Verification 'Phase 3: UI Refinement & Educational Content' (Protocol in workflow.md)
+# Implementation Plan: Core Fidyah Calculator
+
+## Phase 1: Project Foundation [checkpoint: 1d4e302]
+
+- [x] Task: Set up HTML structure with Tailwind CDN (8e4aa86)
+- [x] Task: Design the basic calculator layout (input fields for days and years) (53d9056)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Project Foundation' (Protocol in workflow.md) (1d4e302)
+
+## Phase 2: Core Logic Implementation
+
+- [x] Task: Implement basic fidyah calculation (Days x 1 Mudd) (32c95e6)
+- [x] Task: Implement Syafii multi-year doubling logic (Days x Years x 1 Mudd) (ea2d25d)
+- [x] Task: Add weight conversion logic (Multi-Qoul: 0.675kg, 0.75kg, 0.8kg) (adb656b)
+- [x] Task: Implement cost estimation based on user-provided price per kg (cf1ce63)
+- [x] Task: Wire up the calculation logic to the UI in index.html (382a91b)
+- [ ] Task: Conductor - User Manual Verification 'Phase 2: Core Logic Implementation' (Protocol in workflow.md)
+
+## Phase 3: UI Refinement & Educational Content
+
+- [ ] Task: Add educational explanations (dalil) for each calculation step
+- [ ] Task: Implement accessibility features (large fonts, high contrast mode)
+- [ ] Task: Final responsive design tweaks and share/download result functionality
+- [ ] Task: Conductor - User Manual Verification 'Phase 3: UI Refinement & Educational Content' (Protocol in workflow.md)
