@@ -9,9 +9,11 @@
 export function calculateFidyah({ daysMissed, yearsElapsed }) {
   if (daysMissed < 0) return { totalMudds: 0 }
   
-  // Basic formula for basic fidyah calculation (1 day = 1 mudd)
-  // We'll expand this for multi-year doubling in the next task.
-  const totalMudds = daysMissed
+  // Syafii Madzhab rule: Fidyah doubles/multiplies for each year the debt is not repaid before the next Ramadan.
+  // Formula: Days Missed * (Years Elapsed + 1)
+  // If yearsElapsed is 0 (current year), multiplier is 1.
+  // If yearsElapsed is 1 (one Ramadan passed), multiplier is 2, and so on.
+  const totalMudds = daysMissed * (Math.max(0, yearsElapsed) + 1)
   
   return {
     totalMudds

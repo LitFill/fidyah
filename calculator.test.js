@@ -21,4 +21,15 @@ describe('Fidyah Calculation Logic', () => {
     const result = calculateFidyah({ daysMissed: -1, yearsElapsed: 0 })
     expect(result.totalMudds).toBe(0)
   })
+
+  it('should calculate multi-year doubling correctly (1 year elapsed = 2 mudds per day)', () => {
+    const result = calculateFidyah({ daysMissed: 1, yearsElapsed: 1 })
+    expect(result.totalMudds).toBe(2)
+  })
+
+  it('should calculate multi-year doubling for multiple days and years', () => {
+    // 10 days missed, 2 years elapsed -> 10 * (2 + 1) = 30 mudds
+    const result = calculateFidyah({ daysMissed: 10, yearsElapsed: 2 })
+    expect(result.totalMudds).toBe(30)
+  })
 })
