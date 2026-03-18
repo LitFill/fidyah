@@ -7,8 +7,8 @@
 - [~] Task: Set up custom domain (optional) - SKIPPED
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Deployment Setup' (Protocol in workflow.md) (4741421)
 
-## Phase 2: Post-Deployment
+## Phase 2: Post-Deployment [checkpoint: 973f915]
 
 - [x] Task: Verify site accessibility via public URL - HTTP 200 OK
 - [x] Task: Test functionality on deployed version - Calculator title verified
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Post-Deployment' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Post-Deployment' (Protocol in workflow.md) (973f915)
