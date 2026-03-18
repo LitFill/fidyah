@@ -9,7 +9,7 @@
 
 ## Phase 2: Developer Documentation
 
-- [ ] Task: Create CONTRIBUTING.md with contribution guidelines
-- [ ] Task: Create CHANGELOG.md with release notes
-- [ ] Task: Update tech-stack.md in conductor/
+- [x] Task: Create CONTRIBUTING.md with contribution guidelines (8fe5b32)
+- [x] Task: Create CHANGELOG.md with release notes (e92e568)
+- [x] Task: Update tech-stack.md in conductor/ (d0a53ba)
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Developer Documentation' (Protocol in workflow.md)
