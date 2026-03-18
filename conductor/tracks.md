@@ -4,10 +4,13 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [x] **Track: Build core fidyah calculator functionality** [COMPLETE]
-  _Link: [./tracks/fidyah_core_20260319/](./tracks/fidyah_core_20260319/)_
+## Active Tracks
+
+No active tracks.
 
 ---
 
-- [x] **Track: Deployment & Hosting** [COMPLETE]
-  _Link: [./tracks/deploy_hosting_20260319/](./tracks/deploy_hosting_20260319/)_
+## Archived Tracks
+
+- [~~Track: Build core fidyah calculator functionality~~](./tracks/archived/fidyah_core_20260319/) [COMPLETE]
+- [~~Track: Deployment & Hosting~~](./tracks/archived/deploy_hosting_20260319/) [COMPLETE]
