@@ -28,4 +28,31 @@ describe('index.html structure', () => {
   it('should have a title containing "Fidyah"', () => {
     expect(document.title).toContain('Fidyah')
   })
+
+  describe('Calculator Layout', () => {
+    it('should have an input for "Days Missed"', () => {
+      const input = document.getElementById('days-missed')
+      expect(input).not.toBeNull()
+      expect(input.tagName).toBe('INPUT')
+      expect(input.type).toBe('number')
+    })
+
+    it('should have an input for "Years Elapsed"', () => {
+      const input = document.getElementById('years-elapsed')
+      expect(input).not.toBeNull()
+      expect(input.tagName).toBe('INPUT')
+      expect(input.type).toBe('number')
+    })
+
+    it('should have a display area for the total fidyah calculation', () => {
+      const display = document.getElementById('fidyah-result')
+      expect(display).not.toBeNull()
+    })
+
+    it('should have a select field for weight conversion (Qoul)', () => {
+      const select = document.getElementById('mudd-conversion')
+      expect(select).not.toBeNull()
+      expect(select.tagName).toBe('SELECT')
+    })
+  })
 })
