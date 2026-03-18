@@ -17,7 +17,7 @@
 
 ## Phase 3: UI Refinement & Educational Content
 
-- [ ] Task: Add educational explanations (dalil) for each calculation step
+- [x] Task: Add educational explanations (dalil) for each calculation step (a477eb8)
 - [ ] Task: Implement accessibility features (large fonts, high contrast mode)
 - [ ] Task: Final responsive design tweaks and share/download result functionality
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: UI Refinement & Educational Content' (Protocol in workflow.md)
