@@ -32,4 +32,21 @@ describe('Fidyah Calculation Logic', () => {
     const result = calculateFidyah({ daysMissed: 10, yearsElapsed: 2 })
     expect(result.totalMudds).toBe(30)
   })
+
+  describe('Weight Conversion', () => {
+    it('should convert mudds to kg correctly with default conversion (0.75)', () => {
+      const result = calculateFidyah({ daysMissed: 1, yearsElapsed: 0, muddToKg: 0.75 })
+      expect(result.totalWeightKg).toBe(0.75)
+    })
+
+    it('should convert mudds to kg correctly with 0.675 conversion', () => {
+      const result = calculateFidyah({ daysMissed: 4, yearsElapsed: 0, muddToKg: 0.675 })
+      expect(result.totalWeightKg).toBe(2.7)
+    })
+
+    it('should convert mudds to kg correctly with 0.8 conversion', () => {
+      const result = calculateFidyah({ daysMissed: 5, yearsElapsed: 0, muddToKg: 0.8 })
+      expect(result.totalWeightKg).toBe(4)
+    })
+  })
 })
