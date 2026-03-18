@@ -7,7 +7,6 @@ import { initApp } from './ui.js'
 describe('index.html structure', () => {
   let dom
   let document
-  let localStorageMock
 
   beforeEach(() => {
     const html = fs.readFileSync(path.resolve(__dirname, './index.html'), 'utf8')
