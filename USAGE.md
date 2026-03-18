@@ -25,7 +25,7 @@ Standar mudd adalah ukuran yang digunakan ulama untuk menentukan berapa gram mak
 |---------|-------|------------|
 | Kualitas Sedang | 0.675 kg | Pendapat yang lebih ringan |
 | Standard/Aman | 0.750 kg | Pendapat yang umum digunakan |
-| Ikhtiyat/Hati-hati | 0.800 kg | Pendapat yang lebih严格执行 |
+| Ikhtiyat/Hati-hati | 0.800 kg | Pendapat yang lebih严格执行an
 
 **Rekomendasi:** Gunakan standar **0.750 kg (Standard/Aman)**.
 

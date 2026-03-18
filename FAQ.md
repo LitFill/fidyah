@@ -18,7 +18,7 @@ Fidyah wajib bagi orang yang:
 | | Fidyah | Qadha |
 |---|--------|-------|
 | Pengertian | Membayar ganti rugi | Mengganti puasa di hari lain |
-| Wajib ketika | Hutang puasa memasuki Ramadhan berikutnya | Saat masih有机会 mengganti |
+| Wajib ketika | Hutang puasa memasuki Ramadhan berikutnya | Saat masih ada kesempatan mengganti |
 | Bentuk | Membayar makan orang miskin | Berpuasa di hari lain |
 
 ## Perhitungan
