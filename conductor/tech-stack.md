@@ -20,6 +20,12 @@
 - **Build Step:** None. The project is designed to be served directly from the file system or any static web server.
 - **Development Server:** Standard browser-based preview or a simple local server (e.g., VS Code Live Server).
 
+## Testing
+
+- **Unit Testing:** Node.js with Vitest for JavaScript calculation logic
+- **Code Coverage:** Built-in coverage reports
+
 ## Deployment
 
 - **Target Platform:** Any static hosting provider (e.g., GitHub Pages, Netlify, or Vercel).
+- **Current Deployment:** GitHub Pages - https://litfill.github.io/fidyah/
