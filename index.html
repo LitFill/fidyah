@@ -69,9 +69,124 @@
         outline: 3px solid #059669;
         outline-offset: 2px;
       }
+
+      /* Dark Mode */
+      .dark {
+        --color-bg: #1c1917;
+        --color-surface: #292524;
+        --color-border: #44403c;
+        --color-text-primary: #fafaf9;
+        --color-text-secondary: #a8a29e;
+        --color-accent: #10b981;
+        --color-accent-bg: #064e3b;
+        --color-accent-text: #6ee7b7;
+        --color-success-bg: #064e3b;
+        --color-success-text: #6ee7b7;
+      }
+      .dark body {
+        background-color: var(--color-bg);
+        color: var(--color-text-primary);
+      }
+      .dark header {
+        border-color: var(--color-border);
+      }
+      .dark header h1 {
+        color: var(--color-text-primary);
+      }
+      .dark header p {
+        color: var(--color-text-secondary);
+      }
+      .dark .bg-stone-100 {
+        background-color: var(--color-surface);
+      }
+      .dark .text-stone-700 {
+        color: var(--color-text-secondary);
+      }
+      .dark .bg-white {
+        background-color: var(--color-surface);
+        border-color: var(--color-border);
+      }
+      .dark input,
+      .dark select {
+        background-color: var(--color-bg);
+        border-color: var(--color-border);
+        color: var(--color-text-primary);
+      }
+      .dark input::placeholder {
+        color: var(--color-text-secondary);
+      }
+      .dark input:focus,
+      .dark select:focus {
+        border-color: var(--color-accent);
+      }
+      .dark .bg-stone-50 {
+        background-color: var(--color-bg);
+      }
+      .dark .text-stone-800 {
+        color: var(--color-text-primary);
+      }
+      .dark .text-stone-700 {
+        color: var(--color-text-secondary);
+      }
+      .dark .text-emerald-800 {
+        color: var(--color-accent-text);
+      }
+      .dark .border-stone-200 {
+        border-color: var(--color-border);
+      }
+      .dark .bg-emerald-50 {
+        background-color: var(--color-accent-bg);
+        border-color: var(--color-border);
+      }
+      .dark .text-emerald-700 {
+        color: var(--color-accent-text);
+      }
+      .dark .text-emerald-900 {
+        color: var(--color-accent-text);
+      }
+      .dark .bg-emerald-50 p,
+      .dark .bg-emerald-50 h3 {
+        color: var(--color-accent-text);
+      }
+      .dark footer {
+        color: var(--color-text-secondary);
+      }
+      .dark .bg-stone-600 {
+        background-color: #44403c;
+      }
+      .dark .bg-stone-600:hover {
+        background-color: #57534e;
+      }
+      .dark .border-emerald-600 {
+        border-color: var(--color-accent);
+      }
+      .dark #fidyah-result {
+        background-color: var(--color-bg);
+      }
+      .dark .dark\\:text-slate-300 {
+        color: var(--color-text-secondary);
+      }
+      .dark .dark\\:bg-slate-800 {
+        background-color: var(--color-surface);
+      }
+      .dark .dark\\:bg-slate-900 {
+        background-color: var(--color-bg);
+      }
+      .dark .dark\\:border-slate-700 {
+        border-color: var(--color-border);
+      }
+      .dark .dark\\:text-emerald-400 {
+        color: var(--color-accent-text);
+      }
+      .dark .dark\\:text-white {
+        color: var(--color-text-primary);
+      }
+      .dark .dark\\:text-stone-300 {
+        color: var(--color-text-secondary);
+      }
     </style>
   </head>
-  <body class="bg-stone-50 text-stone-900 font-serif">
+  <body class="bg-stone-50 dark:bg-slate-900 text-stone-900 dark:text-slate-300 font-serif">
     <a
       href="#main-content"
       class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-emerald-600 focus:text-white focus:px-4 focus:py-2 focus:rounded"
@@ -80,32 +195,31 @@
     </a>
 
     <div id="app" class="container mx-auto px-4 py-4 sm:p-4 sm:max-w-md">
-      <header class="text-center my-4 sm:my-8 border-b-2 border-stone-200 pb-4">
-        <h1 class="text-3xl font-bold text-stone-800 tracking-wide">
+      <header class="text-center my-4 sm:my-8 border-b-2 border-stone-200 dark:border-slate-700 pb-4">
+        <h1 class="text-3xl font-bold text-stone-800 dark:text-white tracking-wide">
           Kalkulator Fidyah
         </h1>
-        <p class="text-stone-600 mt-2 italic text-sm">
+        <p class="text-stone-600 dark:text-slate-400 mt-2 italic text-sm">
           Berdasarkan Madzhab Syafii
         </p>
       </header>
 
       <!-- Accessibility Controls -->
       <div
-        class="flex flex-wrap gap-4 mb-6 p-3 bg-stone-100 rounded"
+        class="flex flex-wrap gap-4 mb-6 p-3 bg-stone-100 dark:bg-slate-800 rounded"
         role="group"
         aria-label="Pengaturan Aksesibilitas"
       >
         <div class="flex items-center gap-2">
           <label
             for="font-size-toggle"
-            class="text-sm font-medium text-stone-700"
+            class="text-sm font-medium text-stone-700 dark:text-slate-300"
             >Ukuran Huruf:</label
           >
           <button
             id="font-size-toggle"
             type="button"
-            onclick="document.body.classList.toggle('large-font')"
-            class="px-3 py-1 text-sm bg-white border border-stone-300 rounded hover:bg-stone-50 transition-colors"
+            class="px-3 py-1 text-sm bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 rounded hover:bg-stone-50 dark:hover:bg-slate-800 transition-colors"
             aria-pressed="false"
           >
             Besar
@@ -114,34 +228,48 @@
         <div class="flex items-center gap-2">
           <label
             for="contrast-toggle"
-            class="text-sm font-medium text-stone-700"
+            class="text-sm font-medium text-stone-700 dark:text-slate-300"
             >Kontras:</label
           >
           <button
             id="contrast-toggle"
             type="button"
-            onclick="document.body.classList.toggle('high-contrast')"
-            class="px-3 py-1 text-sm bg-white border border-stone-300 rounded hover:bg-stone-50 transition-colors"
+            class="px-3 py-1 text-sm bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 rounded hover:bg-stone-50 dark:hover:bg-slate-800 transition-colors"
             aria-pressed="false"
           >
             Tinggi
+          </button>
+        </div>
+        <div class="flex items-center gap-2">
+          <label
+            for="theme-toggle"
+            class="text-sm font-medium text-stone-700 dark:text-slate-300"
+            >Tema:</label
+          >
+          <button
+            id="theme-toggle"
+            type="button"
+            class="px-3 py-1 text-sm bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 rounded hover:bg-stone-50 dark:hover:bg-slate-800 transition-colors"
+            aria-pressed="false"
+          >
+            Gelap
           </button>
         </div>
       </div>
 
       <main
         id="main-content"
-        class="bg-white p-6 rounded-lg shadow-md border border-stone-100"
+        class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border border-stone-100 dark:border-slate-700"
         role="main"
       >
         <div class="space-y-6">
           <!-- Info Section -->
           <div
-            class="bg-emerald-50 border border-emerald-200 rounded p-4 text-sm text-emerald-800"
+            class="bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 rounded p-4 text-sm text-emerald-800 dark:text-emerald-400"
             role="note"
             aria-labelledby="info-heading"
           >
-            <h3 id="info-heading" class="font-bold text-emerald-900 mb-2">
+            <h3 id="info-heading" class="font-bold text-emerald-900 dark:text-emerald-400 mb-2">
               Tentang Fidyah
             </h3>
             <p class="mb-2">
@@ -160,7 +288,7 @@
           <div>
             <label
               for="days-missed"
-              class="block text-sm font-semibold text-stone-700 mb-1"
+              class="block text-sm font-semibold text-stone-700 dark:text-slate-300 mb-1"
               >Jumlah Hari yang Ditinggalkan</label
             >
             <input
@@ -168,10 +296,10 @@
               id="days-missed"
               min="0"
               placeholder="0"
-              class="w-full px-4 py-2 border border-stone-300 rounded focus:ring-2 focus:ring-stone-400 focus:outline-none transition-all"
+              class="w-full px-4 py-2 border border-stone-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900 text-stone-900 dark:text-white focus:ring-2 focus:ring-stone-400 dark:focus:ring-emerald-500 focus:outline-none transition-all"
               aria-describedby="days-help"
             />
-            <p id="days-help" class="text-xs text-stone-500 mt-1 italic">
+            <p id="days-help" class="text-xs text-stone-500 dark:text-slate-500 mt-1 italic">
               Jumlah hari puasa Ramadhan yang tidak dijalankan karena uzur
               (sakit, haid, traveling, dll).
             </p>
@@ -181,7 +309,7 @@
           <div>
             <label
               for="years-elapsed"
-              class="block text-sm font-semibold text-stone-700 mb-1"
+              class="block text-sm font-semibold text-stone-700 dark:text-slate-300 mb-1"
               >Jumlah Ramadhan yang Terlewati</label
             >
             <input
@@ -189,12 +317,12 @@
               id="years-elapsed"
               min="0"
               placeholder="0"
-              class="w-full px-4 py-2 border border-stone-300 rounded focus:ring-2 focus:ring-stone-400 focus:outline-none transition-all"
+              class="w-full px-4 py-2 border border-stone-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900 text-stone-900 dark:text-white focus:ring-2 focus:ring-stone-400 dark:focus:ring-emerald-500 focus:outline-none transition-all"
               aria-describedby="years-help"
             />
             <p
               id="years-help"
-              class="text-xs text-stone-500 mt-1 italic leading-relaxed"
+              class="text-xs text-stone-500 dark:text-slate-500 mt-1 italic leading-relaxed"
             >
               Catatan: Dalam Madzhab Syafii, fidyah berlipat ganda setiap kali
               hutang puasa melewati bulan Ramadhan berikutnya.
@@ -205,19 +333,19 @@
           <div>
             <label
               for="mudd-conversion"
-              class="block text-sm font-semibold text-stone-700 mb-1"
+              class="block text-sm font-semibold text-stone-700 dark:text-slate-300 mb-1"
               >Standar Konversi Mudd ke KG</label
             >
             <select
               id="mudd-conversion"
-              class="w-full px-4 py-2 border border-stone-300 rounded focus:ring-2 focus:ring-stone-400 focus:outline-none transition-all bg-white"
+              class="w-full px-4 py-2 border border-stone-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900 text-stone-900 dark:text-white focus:ring-2 focus:ring-stone-400 dark:focus:ring-emerald-500 focus:outline-none transition-all"
               aria-describedby="mudd-help"
             >
               <option value="0.675">0.675 kg (Kualitas Sedang)</option>
               <option value="0.75" selected>0.750 kg (Standard/Aman)</option>
               <option value="0.8">0.800 kg (Ikhtiyat/Hati-hati)</option>
             </select>
-            <p id="mudd-help" class="text-xs text-stone-500 mt-1 italic">
+            <p id="mudd-help" class="text-xs text-stone-500 dark:text-slate-500 mt-1 italic">
               Perbedaan standar berdasarkan pendapat ulama (Multi Qoul).
             </p>
           </div>
@@ -226,7 +354,7 @@
           <div>
             <label
               for="price-per-kg"
-              class="block text-sm font-semibold text-stone-700 mb-1"
+              class="block text-sm font-semibold text-stone-700 dark:text-slate-300 mb-1"
               >Harga Beras per KG (Rp)</label
             >
             <input
@@ -234,10 +362,10 @@
               id="price-per-kg"
               min="0"
               value="15000"
-              class="w-full px-4 py-2 border border-stone-300 rounded focus:ring-2 focus:ring-stone-400 focus:outline-none transition-all"
+              class="w-full px-4 py-2 border border-stone-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900 text-stone-900 dark:text-white focus:ring-2 focus:ring-stone-400 dark:focus:ring-emerald-500 focus:outline-none transition-all"
               aria-describedby="price-help"
             />
-            <p id="price-help" class="text-xs text-stone-500 mt-1 italic">
+            <p id="price-help" class="text-xs text-stone-500 dark:text-slate-500 mt-1 italic">
               Masukkan harga beras di daerah Anda saat ini.
             </p>
           </div>
@@ -245,44 +373,56 @@
           <!-- Result Area -->
           <div
             id="fidyah-result"
-            class="mt-8 p-4 bg-stone-50 border-l-4 border-emerald-600 hidden"
+            class="mt-8 p-4 bg-stone-50 dark:bg-slate-900 border-l-4 border-emerald-600 dark:border-emerald-500 hidden"
             role="region"
             aria-labelledby="result-heading"
             aria-live="polite"
           >
             <h2
               id="result-heading"
-              class="text-lg font-bold text-stone-800 mb-2"
+              class="text-lg font-bold text-stone-800 dark:text-white mb-2"
             >
               Hasil Perhitungan
             </h2>
-            <div class="space-y-2 text-stone-700 text-sm">
+            <div class="space-y-2 text-stone-700 dark:text-slate-300 text-sm">
               <p>
                 Total Hutang Fidyah:
-                <span id="total-days" class="font-bold">0</span> mudd
+                <span id="total-days" class="font-bold text-emerald-700 dark:text-emerald-400">0</span> mudd
               </p>
-              <p class="text-xs text-stone-500 italic">
+              <p class="text-xs text-stone-500 dark:text-slate-500 italic">
                 (1 mudd = 1x memberi makan orang miskin)
               </p>
               <p>
                 Total Berat Beras:
-                <span id="total-weight" class="font-bold">0</span> kg
+                <span id="total-weight" class="font-bold text-emerald-700 dark:text-emerald-400">0</span> kg
               </p>
-              <p class="text-xs text-stone-500 italic">
+              <p class="text-xs text-stone-500 dark:text-slate-500 italic">
                 (Berdasarkan standar mudd yang dipilih)
               </p>
               <p
-                class="text-lg text-emerald-800 mt-4 border-t border-stone-200 pt-2 font-bold"
+                class="text-lg text-emerald-800 dark:text-emerald-400 mt-4 border-t border-stone-200 dark:border-slate-700 pt-2 font-bold"
               >
                 Estimasi Biaya Fidyah: Rp <span id="total-cost">0</span>
               </p>
             </div>
+
+            <!-- Step-by-step Calculation Breakdown -->
             <div
-              class="mt-4 p-3 bg-emerald-50 rounded text-xs text-emerald-700"
+              id="calculation-breakdown"
+              class="mt-4 p-3 bg-white dark:bg-slate-800 border border-stone-200 dark:border-slate-700 rounded text-xs"
+            >
+              <p class="font-semibold text-stone-700 dark:text-slate-300 mb-2">Rincian Perhitungan:</p>
+              <div id="step-formula" class="space-y-1 text-stone-600 dark:text-slate-400">
+                <!-- Filled by JavaScript -->
+              </div>
+            </div>
+
+            <div
+              class="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900/30 rounded text-xs text-emerald-700 dark:text-emerald-400"
               role="note"
             >
               <p class="font-semibold">Dalil Perhitungan:</p>
-              <p class="mt-1">Hari × Ramadhan Terlewati = Total Mudd</p>
+              <p class="mt-1">Hari × Ramadhan Terlewati + 1 = Total Mudd</p>
               <p>Total Mudd × Standar Mudd = Total KG Beras</p>
               <p class="mt-1 italic">
                 "Maka barangsiapa di antara kamu hadir (di tempat tinggalnya) di
@@ -316,7 +456,7 @@
               <button
                 type="button"
                 onclick="downloadResult()"
-                class="flex-1 px-4 py-2 bg-stone-600 text-white text-sm font-medium rounded hover:bg-stone-700 transition-colors flex items-center justify-center gap-2"
+                class="flex-1 px-4 py-2 bg-stone-600 dark:bg-slate-700 text-white text-sm font-medium rounded hover:bg-stone-700 dark:hover:bg-slate-600 transition-colors flex items-center justify-center gap-2"
               >
                 <svg
                   class="w-4 h-4"
@@ -336,7 +476,7 @@
             </div>
             <p
               id="copy-feedback"
-              class="mt-2 text-xs text-emerald-600 text-center hidden"
+              class="mt-2 text-xs text-emerald-600 dark:text-emerald-400 text-center hidden"
             >
               Hasil berhasil disalin!
             </p>
@@ -345,7 +485,7 @@
       </main>
 
       <footer
-        class="mt-8 text-center text-xs text-stone-500 leading-relaxed px-4"
+        class="mt-8 text-center text-xs text-stone-500 dark:text-slate-500 leading-relaxed px-4"
       >
         <p>
           "Dan wajib bagi orang-orang yang berat menjalankannya (jika mereka
@@ -354,46 +494,18 @@
         </p>
       </footer>
     </div>
-    <script>
-      function calculateFidyah() {
-        const days =
-          parseInt(document.getElementById("days-missed").value) || 0;
-        let years =
-          parseInt(document.getElementById("years-elapsed").value) || 0;
-        const muddConversion = parseFloat(
-          document.getElementById("mudd-conversion").value,
-        );
-        const pricePerKg =
-          parseInt(document.getElementById("price-per-kg").value) || 0;
-
-        years = Math.max(years, 1);
-
-        const totalMudd = days * years;
-        const totalKg = totalMudd * muddConversion;
-        const totalCost = Math.round(totalKg * pricePerKg);
-
-        document.getElementById("total-days").textContent = totalMudd;
-        document.getElementById("total-weight").textContent =
-          totalKg.toFixed(3);
-        document.getElementById("total-cost").textContent =
-          totalCost.toLocaleString("id-ID");
-
-        document
-          .getElementById("fidyah-result")
-          .classList.toggle("hidden", days === 0);
+    <script type="module">
+      import { initApp } from "./ui.js";
+      initApp();
+      
+      // Restore theme preference
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        document.getElementById("theme-toggle").setAttribute("aria-pressed", "true");
       }
-
-      [
-        "days-missed",
-        "years-elapsed",
-        "mudd-conversion",
-        "price-per-kg",
-      ].forEach((id) => {
-        document.getElementById(id).addEventListener("input", calculateFidyah);
-      });
-
-      calculateFidyah();
-
+    </script>
+    <script>
       document
         .getElementById("font-size-toggle")
         .addEventListener("click", function () {
@@ -406,6 +518,13 @@
           const isActive = document.body.classList.toggle("high-contrast");
           this.setAttribute("aria-pressed", isActive);
         });
+      document
+        .getElementById("theme-toggle")
+        .addEventListener("click", function () {
+          const isActive = document.body.classList.toggle("dark");
+          this.setAttribute("aria-pressed", isActive);
+          localStorage.setItem("theme", isActive ? "dark" : "light");
+        });
 
       function getResultText() {
         const days = document.getElementById("days-missed").value || "0";
@@ -417,7 +536,7 @@
         const totalCost = document.getElementById("total-cost").textContent;
 
         return `HASIL PERHITUNGAN FIDYAH
-========================
+====================
 
 Tanggal: ${new Date().toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" })}
 
@@ -443,7 +562,7 @@ Kalkulator Fidyah
         navigator.clipboard.writeText(text).then(() => {
           const feedback = document.getElementById("copy-feedback");
           feedback.classList.remove("hidden");
-          setTimeout(() => feedback.classList.add("hidden"), 2000);
+          setTimeout(() => feedback.classList.add("hidden"), 4000);
         });
       }
 
