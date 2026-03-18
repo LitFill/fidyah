@@ -1,0 +1,8 @@
+{
+  "track_id": "deploy_hosting_20260319",
+  "type": "deployment",
+  "status": "new",
+  "created_at": "2026-03-19T12:00:00Z",
+  "updated_at": "2026-03-19T12:00:00Z",
+  "description": "Deploy the fidyah calculator as a static site"
+}
