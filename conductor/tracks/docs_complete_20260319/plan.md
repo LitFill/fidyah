@@ -2,9 +2,9 @@
 
 ## Phase 1: User Documentation
 
-- [ ] Task: Create/update README.md with project overview
-- [ ] Task: Create usage guide (how to use the calculator)
-- [ ] Task: Create FAQ section
+- [x] Task: Create/update README.md with project overview (a78bf4b)
+- [x] Task: Create usage guide (how to use the calculator) (9e78d17)
+- [x] Task: Create FAQ section (d3c8915)
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: User Documentation' (Protocol in workflow.md)
 
 ## Phase 2: Developer Documentation
