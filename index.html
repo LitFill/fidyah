@@ -68,5 +68,31 @@
             <p>"Dan wajib bagi orang-orang yang berat menjalankannya (jika mereka tidak berpuasa) membayar fidyah, (yaitu): memberi makan seorang miskin." (QS. Al-Baqarah: 184)</p>
         </footer>
     </div>
+    <script>
+        function calculateFidyah() {
+            const days = parseInt(document.getElementById('days-missed').value) || 0;
+            let years = parseInt(document.getElementById('years-elapsed').value) || 0;
+            const muddConversion = parseFloat(document.getElementById('mudd-conversion').value);
+            const pricePerKg = parseInt(document.getElementById('price-per-kg').value) || 0;
+            
+            years = Math.max(years, 1);
+            
+            const totalMudd = days * years;
+            const totalKg = totalMudd * muddConversion;
+            const totalCost = Math.round(totalKg * pricePerKg);
+            
+            document.getElementById('total-days').textContent = totalMudd;
+            document.getElementById('total-weight').textContent = totalKg.toFixed(3);
+            document.getElementById('total-cost').textContent = totalCost.toLocaleString('id-ID');
+            
+            document.getElementById('fidyah-result').classList.toggle('hidden', days === 0);
+        }
+        
+        ['days-missed', 'years-elapsed', 'mudd-conversion', 'price-per-kg'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateFidyah);
+        });
+        
+        calculateFidyah();
+    </script>
 </body>
 </html>
