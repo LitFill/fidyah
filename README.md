@@ -52,4 +52,3 @@ MIT License
 
 ---
 
-*无声*

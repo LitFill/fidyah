@@ -19,8 +19,8 @@ export function calculateFidyah({
   if (daysMissed < 0) return { totalMudds: 0, totalWeightKg: 0, totalCost: 0 };
 
   // Syafii Madzhab rule: Fidyah doubles/multiplies for each year the debt is not repaid before the next Ramadan.
-  // Formula: Days Missed * (Years Elapsed + 1)
-  const totalMudds = daysMissed * (Math.max(0, yearsElapsed) + 1);
+  // Formula: Days Missed * (Years Elapsed)
+  const totalMudds = daysMissed * Math.max(0, yearsElapsed);
 
   // Convert Mudd to KG
   const totalWeightKg = totalMudds * muddToKg;
