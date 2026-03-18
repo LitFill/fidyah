@@ -9,6 +9,6 @@
 
 ## Phase 2: Post-Deployment
 
-- [ ] Task: Verify site accessibility via public URL
-- [ ] Task: Test functionality on deployed version
+- [x] Task: Verify site accessibility via public URL - HTTP 200 OK
+- [x] Task: Test functionality on deployed version - Calculator title verified
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Post-Deployment' (Protocol in workflow.md)
