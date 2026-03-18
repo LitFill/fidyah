@@ -49,4 +49,17 @@ describe('Fidyah Calculation Logic', () => {
       expect(result.totalWeightKg).toBe(4)
     })
   })
+
+  describe('Cost Estimation', () => {
+    it('should calculate total cost correctly', () => {
+      const result = calculateFidyah({ daysMissed: 1, yearsElapsed: 0, muddToKg: 0.75, pricePerKg: 15000 })
+      expect(result.totalCost).toBe(11250)
+    })
+
+    it('should calculate total cost for multi-year and multiple days', () => {
+      // 10 days, 1 year elapsed -> 20 mudds. 20 * 0.75 = 15kg. 15 * 10000 = 150000
+      const result = calculateFidyah({ daysMissed: 10, yearsElapsed: 1, muddToKg: 0.75, pricePerKg: 10000 })
+      expect(result.totalCost).toBe(150000)
+    })
+  })
 })
