@@ -2,8 +2,8 @@
 
 ## Phase 1: Deployment Setup
 
-- [ ] Task: Choose deployment platform (GitHub Pages / Netlify / Cloudflare Pages)
-- [ ] Task: Configure deployment settings
+- [x] Task: Choose deployment platform (GitHub Pages) - GitHub repo: https://github.com/LitFill/fidyah
+- [x] Task: Configure deployment settings - GitHub Pages enabled, site: https://litfill.github.io/fidyah/
 - [ ] Task: Set up custom domain (optional)
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Deployment Setup' (Protocol in workflow.md)
 
