@@ -96,7 +96,7 @@
 
     <!-- Controls -->
     <div class="mt-4 flex gap-2 justify-end">
-      <button id="theme-toggle" class="text-xs px-3 py-1" style="border-color:var(--border)">☀️</button>
+      <button id="theme-toggle" class="text-xs px-3 py-1" style="border-color:var(--border)" aria-label="Ganti tema">☀️</button>
     </div>
 
     <footer class="mt-8 text-center text-xs" style="color:var(--muted)">
@@ -121,7 +121,6 @@
       const t=document.getElementById("total-cost").textContent;
       return`FIDYAH: ${t} Rp\n${d} hari × ${y} Ramadhan\nKalkulator Fidyah - Madzhab Syafii`;
     }
-    document.getElementById("fidyah-result")?.querySelector("button")?.remove();
   </script>
 </body>
 </html>
