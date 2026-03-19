@@ -118,8 +118,11 @@
       Langsung ke konten utama
     </a>
 
-    <div id="app" class="container mx-auto px-4 py-8 sm:p-6 sm:max-w-lg">
-      <header class="text-center my-8 sm:my-12 relative">
+    <div id="app" class="container mx-auto px-4 py-8 sm:p-6 lg:max-w-6xl">
+      <div class="flex justify-end mb-2">
+        <a href="index2.html" class="text-xs text-stone-400 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Versi Compact →</a>
+      </div>
+      <header class="text-center my-4 sm:my-8 lg:mb-8 relative">
         <div
           class="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-emerald-500 to-transparent rounded-full"
         ></div>
@@ -176,6 +179,10 @@
         </div>
       </div>
 
+      <!-- Two Column Layout -->
+      <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+
+      <!-- Left Column: Calculator -->
       <main
         id="main-content"
         class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl border border-stone-200 dark:border-slate-700"
@@ -259,7 +266,7 @@
               type="number"
               id="years-elapsed"
               min="0"
-              placeholder="1"
+              placeholder="0"
               class="w-full px-5 py-4 text-lg font-medium border-2 border-stone-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-900 text-stone-900 dark:text-white focus:ring-2 focus:ring-emerald-500 dark:focus:ring-emerald-400 focus:border-emerald-400 dark:focus:border-emerald-500 focus:outline-none transition-all"
               aria-describedby="years-help"
             />
@@ -267,8 +274,26 @@
               id="years-help"
               class="text-sm text-stone-500 dark:text-slate-500 italic leading-relaxed"
             >
-              Catatan: Fidyah berlipat ganda setiap kali hutang puasa melewati
-              Ramadhan berikutnya.
+              Catatan: Fidyah berlipat ganda setiap kali hutang puasa melewati Ramadhan berikutnya.
+            </p>
+          </div>
+
+          <!-- Calculation Method -->
+          <div class="space-y-2">
+            <label
+              for="calculation-method"
+              class="block text-base font-bold text-stone-700 dark:text-slate-200"
+              >Rumus Perhitungan</label
+            >
+            <select
+              id="calculation-method"
+              class="w-full px-5 py-4 text-lg font-medium border-2 border-stone-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-900 text-stone-900 dark:text-white focus:ring-2 focus:ring-emerald-500 dark:focus:ring-emerald-400 focus:border-emerald-400 dark:focus:border-emerald-500 focus:outline-none transition-all cursor-pointer"
+            >
+              <option value="linear">Linear (D × Y)</option>
+              <option value="exponential">Eksponensial (D × 2^(Y-1))</option>
+            </select>
+            <p class="text-sm text-stone-500 dark:text-slate-500 italic">
+              Linear: Fidyah bertambah 1x per tahun. Eksponensial: Fidyah berlipat ganda per tahun.
             </p>
           </div>
 
@@ -292,7 +317,7 @@
               id="mudd-help"
               class="text-sm text-stone-500 dark:text-slate-500 italic"
             >
-              Berdasarkan pendapat ulama (Multi Qoul).
+              Standar mudd berdasarkan pendapat beberapa ulama.
             </p>
           </div>
 
@@ -492,6 +517,139 @@
           </div>
         </div>
       </main>
+
+      <!-- Right Column: Supplementary Content -->
+      <aside class="mt-10 lg:mt-0 space-y-6">
+        <!-- Quick Reference -->
+        <div class="bg-gradient-to-br from-stone-100 to-stone-50 dark:from-slate-800 dark:to-slate-800/50 rounded-2xl p-6 border border-stone-200 dark:border-slate-700">
+          <h3 class="font-black text-lg text-stone-800 dark:text-white mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+            Referensi Cepat
+          </h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+              <p class="text-stone-600 dark:text-slate-300"><strong>1 Mudd</strong> = ~675-800 gram beras</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+              <p class="text-stone-600 dark:text-slate-300"><strong>Fidyah</strong> wajib bagi yang tidak mampu puasa</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+              <p class="text-stone-600 dark:text-slate-300"><strong>Berlapis</strong> setiap Ramadhan terlewati</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-stone-200 dark:border-slate-700 shadow-sm">
+          <h3 class="font-black text-lg text-stone-800 dark:text-white mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Pertanyaan Umum
+          </h3>
+          <div class="space-y-4">
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer text-stone-700 dark:text-slate-200 font-semibold text-sm">
+                Kapan fidyah wajib dibayar?
+                <svg class="w-4 h-4 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <p class="mt-2 text-stone-500 dark:text-slate-400 text-sm">
+                Fidyah wajib dibayar saat seseorang tidak dapat berpuasa karena uzur yang bersifat permanen atau sementara.
+              </p>
+            </details>
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer text-stone-700 dark:text-slate-200 font-semibold text-sm">
+                Apa bedanya fidyah dan qadha?
+                <svg class="w-4 h-4 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <p class="mt-2 text-stone-500 dark:text-slate-400 text-sm">
+                Qadha adalah menggabungkan puasa di hari lain. Fidyah adalah membayar untuk tidak puasa dengan memberi makan orang miskin.
+              </p>
+            </details>
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer text-stone-700 dark:text-slate-200 font-semibold text-sm">
+                Fidyah berapa kali lipat?
+                <svg class="w-4 h-4 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <p class="mt-2 text-stone-500 dark:text-slate-400 text-sm">
+                Dalam Madzhab Syafii, fidyah berlipat ganda setiap Ramadhan yang terlewati. Gunakan kalkulator ini untuk simulasi.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 border border-amber-200 dark:border-amber-800/50">
+          <h3 class="font-black text-lg text-amber-800 dark:text-amber-300 mb-3 flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+            Tips
+          </h3>
+          <ul class="space-y-2 text-sm text-amber-700 dark:text-amber-300">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-500">•</span>
+              <span>Bayar fidyah sebelum Ramadhan berikutnya untuk menghindari pertambahan</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-500">•</span>
+              <span>Harga beras dapat bervariasi - perbarui harga terkini untuk hasil akurat</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-500">•</span>
+              <span>Konsultasikan dengan ulama jika memiliki kondisi khusus</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Dalil Section -->
+        <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl p-6 border border-emerald-200 dark:border-emerald-800/50">
+          <h3 class="font-black text-lg text-emerald-800 dark:text-emerald-300 mb-4">Dalil</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <blockquote class="text-emerald-700 dark:text-emerald-300 text-sm italic mb-2">
+                "Dan wajib bagi orang-orang yang berat menjalankannya (jika mereka tidak berpuasa) membayar fidyah, (yaitu): memberi makan seorang miskin."
+              </blockquote>
+              <p class="text-emerald-600 dark:text-emerald-400 text-xs font-semibold">QS. Al-Baqarah: 184</p>
+            </div>
+            
+            <div class="border-t border-emerald-200 dark:border-emerald-800/50 pt-4">
+              <blockquote class="text-emerald-700 dark:text-emerald-300 text-sm italic mb-2">
+                "Apabila salah seorang dari kamu sakit atau dalam perjalanan, maka hendaklah ia berpuasa pada hari-hari yang lain. Dan wajib bagi orang-orang yang berat menjalankannya (jika mereka tidak berpuasa) membayar fidyah..." 
+              </blockquote>
+              <p class="text-emerald-600 dark:text-emerald-400 text-xs font-semibold">QS. Al-Baqarah: 184-185</p>
+            </div>
+            
+            <div class="border-t border-emerald-200 dark:border-emerald-800/50 pt-4">
+              <blockquote class="text-emerald-700 dark:text-emerald-300 text-sm italic mb-2">
+                "Barangsiapa sakit atau dalam perjalanan, maka (wajib) menggabungkan (qadha) puasa di hari-hari yang lain."
+              </blockquote>
+              <p class="text-emerald-600 dark:text-emerald-400 text-xs font-semibold">HR. Bukhari & Muslim</p>
+            </div>
+            
+            <div class="border-t border-emerald-200 dark:border-emerald-800/50 pt-4">
+              <p class="text-emerald-700 dark:text-emerald-300 text-sm font-semibold mb-2">Catatan:</p>
+              <p class="text-emerald-600 dark:text-emerald-400 text-xs">
+                <strong>Qadha</strong> wajib bagi yang sempat mengganti puasa. <strong>Fidyah</strong> wajib bagi yang tidak mampu berpuasa sama sekali (uzur permanen).
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      </div><!-- End Two Column Layout -->
 
       <footer
         class="mt-12 py-6 text-center border-t border-stone-200 dark:border-slate-700"

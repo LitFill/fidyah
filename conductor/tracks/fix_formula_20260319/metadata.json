@@ -1,0 +1,9 @@
+{
+  "track_id": "fix_formula_20260319",
+  "type": "bug_fix",
+  "status": "new",
+  "created_at": "2026-03-19T19:11:00Z",
+  "updated_at": "2026-03-19T19:11:00Z",
+  "description": "Fix calculation formula discrepancy between calculator.js and inline script",
+  "parent_track": "code_review_20260319"
+}

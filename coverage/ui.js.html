@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.93% </span>
+                <span class="strong">89.04% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>57/62</span>
+                <span class='fraction'>65/73</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64.28% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/14</span>
+                <span class='fraction'>9/15</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.93% </span>
+                <span class="strong">89.04% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>57/62</span>
+                <span class='fraction'>65/73</span>
             </div>
         
             
@@ -139,20 +139,39 @@
 <a name='L74'></a><a href='#L74'>74</a>
 <a name='L75'></a><a href='#L75'>75</a>
 <a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">106x</span>
-<span class="cline-any cline-yes">106x</span>
-<span class="cline-any cline-yes">106x</span>
+<span class="cline-any cline-yes">119x</span>
+<span class="cline-any cline-yes">119x</span>
+<span class="cline-any cline-yes">119x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">106x</span>
-<span class="cline-any cline-yes">106x</span>
+<span class="cline-any cline-yes">119x</span>
+<span class="cline-any cline-yes">119x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -171,6 +190,7 @@
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">13x</span>
@@ -188,8 +208,10 @@
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -215,6 +237,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { calculateFidyah } from "./calculator.js";
 &nbsp;
 function getElement(id) {
@@ -229,14 +255,20 @@ function updateCalculationBreakdown(daysMissed, yearsElapsed, muddToKg, pricePer
   const breakdownEl = getElement("step-formula");
   if (!breakdownEl) <span class="branch-0 cbranch-no" title="branch not covered" >return;</span>
 &nbsp;
-  const yearsAdder = yearsElapsed + 1;
-  const multiplierText = yearsElapsed &gt; 0 
-    ? ` (${yearsElapsed} Ramadhan + 1)` 
-<span class="branch-0 cbranch-no" title="branch not covered" >    : "";</span>
+  let formulaText, multiplierText;
+&nbsp;
+  if (result.method === 'exponential') <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    const multiplier = yearsElapsed &lt;= 1 ? 1 : Math.pow(2, yearsElapsed - 1);</span>
+<span class="cstat-no" title="statement not covered" >    formulaText = `${daysMissed} × 2^(${yearsElapsed}-1) = ${daysMissed} × ${multiplier}`;</span>
+<span class="cstat-no" title="statement not covered" >    multiplierText = `(Eksponensial)`;</span>
+  } else {
+    formulaText = `${daysMissed} × ${yearsElapsed} = ${daysMissed * yearsElapsed}`;
+    multiplierText = `(Linear)`;
+  }
 &nbsp;
   breakdownEl.innerHTML = `
-    &lt;p&gt;1. &lt;strong&gt;${daysMissed}&lt;/strong&gt; hari × (&lt;strong&gt;${yearsElapsed}&lt;/strong&gt; Ramadhan + 1) = &lt;strong&gt;${daysMissed}&lt;/strong&gt; × &lt;strong&gt;${yearsAdder}&lt;/strong&gt;&lt;/p&gt;
-    &lt;p&gt;2. Total Mudd = &lt;strong&gt;${result.totalMudds}&lt;/strong&gt; mudd&lt;/p&gt;
+    &lt;p&gt;1. &lt;strong&gt;${formulaText}&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;2. Total Mudd = &lt;strong&gt;${result.totalMudds}&lt;/strong&gt; mudd ${multiplierText}&lt;/p&gt;
     &lt;p&gt;3. ${result.totalMudds} mudd × &lt;strong&gt;${muddToKg}&lt;/strong&gt; kg/mudd = &lt;strong&gt;${result.totalWeightKg.toFixed(2)}&lt;/strong&gt; kg&lt;/p&gt;
     &lt;p&gt;4. ${result.totalWeightKg.toFixed(2)} kg × Rp &lt;strong&gt;${pricePerKg.toLocaleString("id-ID")}&lt;/strong&gt; = &lt;strong&gt;Rp ${result.totalCost.toLocaleString("id-ID")}&lt;/strong&gt;&lt;/p&gt;
   `;
@@ -247,6 +279,7 @@ export function initApp() {
   const yearsInput = getElement("years-elapsed");
   const muddSelect = getElement("mudd-conversion");
   const priceInput = getElement("price-per-kg");
+  const methodSelect = getElement("calculation-method");
 &nbsp;
   const resultArea = getElement("fidyah-result");
   const totalDaysDisplay = getElement("total-days");
@@ -264,6 +297,7 @@ export function initApp() {
     const yearsElapsed = parseInt(yearsInput.value) || 0;
     const muddToKg = parseFloat(muddSelect.value);
     const pricePerKg = parseFloat(priceInput.value) <span class="branch-0 cbranch-no" title="branch not covered" >|| 0;</span>
+    const method = methodSelect ? methodSelect.value <span class="branch-0 cbranch-no" title="branch not covered" >: 'linear';</span>
 &nbsp;
     if (daysMissed &gt; 0) {
       const result = calculateFidyah({
@@ -271,6 +305,7 @@ export function initApp() {
         yearsElapsed,
         muddToKg,
         pricePerKg,
+        method,
       });
 &nbsp;
       totalDaysDisplay.textContent = result.totalMudds;
@@ -289,6 +324,10 @@ export function initApp() {
     input.addEventListener("input", updateResults);
   });
 &nbsp;
+  if (methodSelect) {
+    methodSelect.addEventListener("change", updateResults);
+  }
+&nbsp;
   updateResults();
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -298,7 +337,7 @@ export function initApp() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-03-18T23:49:34.858Z
+                at 2026-03-19T01:18:52.816Z
             </div>
         <script src="prettify.js"></script>
         <script>

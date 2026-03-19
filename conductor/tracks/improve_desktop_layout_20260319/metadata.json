@@ -1,0 +1,10 @@
+{
+  "name": "improve_desktop_layout",
+  "created": "2026-03-19",
+  "status": "complete",
+  "priority": "medium",
+  "skills": ["arrange", "bolder"],
+  "files": ["index.html"],
+  "tests": ["npm test"],
+  "completed": "2026-03-19"
+}

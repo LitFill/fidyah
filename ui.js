@@ -12,14 +12,20 @@ function updateCalculationBreakdown(daysMissed, yearsElapsed, muddToKg, pricePer
   const breakdownEl = getElement("step-formula");
   if (!breakdownEl) return;
 
-  const yearsAdder = yearsElapsed + 1;
-  const multiplierText = yearsElapsed > 0 
-    ? ` (${yearsElapsed} Ramadhan + 1)` 
-    : "";
+  let formulaText, multiplierText;
+
+  if (result.method === 'exponential') {
+    const multiplier = yearsElapsed <= 1 ? 1 : Math.pow(2, yearsElapsed - 1);
+    formulaText = `${daysMissed} × 2^(${yearsElapsed}-1) = ${daysMissed} × ${multiplier}`;
+    multiplierText = `(Eksponensial)`;
+  } else {
+    formulaText = `${daysMissed} × ${yearsElapsed} = ${daysMissed * yearsElapsed}`;
+    multiplierText = `(Linear)`;
+  }
 
   breakdownEl.innerHTML = `
-    <p>1. <strong>${daysMissed}</strong> hari × (<strong>${yearsElapsed}</strong> Ramadhan + 1) = <strong>${daysMissed}</strong> × <strong>${yearsAdder}</strong></p>
-    <p>2. Total Mudd = <strong>${result.totalMudds}</strong> mudd</p>
+    <p>1. <strong>${formulaText}</strong></p>
+    <p>2. Total Mudd = <strong>${result.totalMudds}</strong> mudd ${multiplierText}</p>
     <p>3. ${result.totalMudds} mudd × <strong>${muddToKg}</strong> kg/mudd = <strong>${result.totalWeightKg.toFixed(2)}</strong> kg</p>
     <p>4. ${result.totalWeightKg.toFixed(2)} kg × Rp <strong>${pricePerKg.toLocaleString("id-ID")}</strong> = <strong>Rp ${result.totalCost.toLocaleString("id-ID")}</strong></p>
   `;
@@ -30,6 +36,7 @@ export function initApp() {
   const yearsInput = getElement("years-elapsed");
   const muddSelect = getElement("mudd-conversion");
   const priceInput = getElement("price-per-kg");
+  const methodSelect = getElement("calculation-method");
 
   const resultArea = getElement("fidyah-result");
   const totalDaysDisplay = getElement("total-days");
@@ -47,6 +54,7 @@ export function initApp() {
     const yearsElapsed = parseInt(yearsInput.value) || 0;
     const muddToKg = parseFloat(muddSelect.value);
     const pricePerKg = parseFloat(priceInput.value) || 0;
+    const method = methodSelect ? methodSelect.value : 'linear';
 
     if (daysMissed > 0) {
       const result = calculateFidyah({
@@ -54,6 +62,7 @@ export function initApp() {
         yearsElapsed,
         muddToKg,
         pricePerKg,
+        method,
       });
 
       totalDaysDisplay.textContent = result.totalMudds;
@@ -71,6 +80,10 @@ export function initApp() {
   [daysInput, yearsInput, muddSelect, priceInput].forEach((input) => {
     input.addEventListener("input", updateResults);
   });
+
+  if (methodSelect) {
+    methodSelect.addEventListener("change", updateResults);
+  }
 
   updateResults();
 }

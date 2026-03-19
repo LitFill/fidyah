@@ -5,22 +5,33 @@
  * @param {number} params.yearsElapsed - Number of Ramadans passed since the debt occurred.
  * @param {number} [params.muddToKg=0.75] - Conversion factor from Mudd to kilograms.
  * @param {number} [params.pricePerKg=0] - Price of staple food per kilogram.
+ * @param {string} [params.method='linear'] - Calculation method: 'linear' or 'exponential'.
  * @returns {Object<string, number>} result - The calculation result.
  * @returns {number} result.totalMudds - Total fidyah in Mudd.
  * @returns {number} result.totalWeightKg - Total fidyah in kilograms.
  * @returns {number} result.totalCost - Estimated total cost in currency.
+ * @returns {string} result.method - The method used for calculation.
  */
 export function calculateFidyah({
   daysMissed,
   yearsElapsed,
   muddToKg = 0.75,
   pricePerKg = 0,
+  method = 'linear',
 }) {
-  if (daysMissed < 0) return { totalMudds: 0, totalWeightKg: 0, totalCost: 0 };
+  if (daysMissed < 0) return { totalMudds: 0, totalWeightKg: 0, totalCost: 0, method };
 
-  // Syafii Madzhab rule: Fidyah doubles/multiplies for each year the debt is not repaid before the next Ramadan.
-  // Formula: Days Missed * (Years Elapsed)
-  const totalMudds = daysMissed * Math.max(0, yearsElapsed);
+  let totalMudds;
+
+  if (method === 'exponential') {
+    // Exponential formula: M = D × 2^(Y-1)
+    // If Y = 0 or 1, then 2^(Y-1) = 1 (minimum multiplier)
+    const multiplier = yearsElapsed <= 1 ? 1 : Math.pow(2, yearsElapsed - 1);
+    totalMudds = daysMissed * multiplier;
+  } else {
+    // Linear formula: M = D × Y
+    totalMudds = daysMissed * yearsElapsed;
+  }
 
   // Convert Mudd to KG
   const totalWeightKg = totalMudds * muddToKg;
@@ -32,5 +43,6 @@ export function calculateFidyah({
     totalMudds,
     totalWeightKg,
     totalCost,
+    method,
   };
 }

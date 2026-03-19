@@ -84,12 +84,12 @@ describe('index.html structure', () => {
 
       // Set values
       daysInput.value = '10'
-      yearsInput.value = '1' // multiplier is 2
+      yearsInput.value = '2' // multiplier is 2
       
       // Trigger input event
       daysInput.dispatchEvent(new dom.window.Event('input'))
       
-      // Should show calculated result: days × (years + 1) = 10 × 2 = 20
+      // Should show calculated result: days × years = 10 × 2 = 20
       expect(totalDaysDisplay.textContent).toBe('20')
       expect(resultArea.classList.contains('hidden')).toBe(false)
     })
@@ -118,8 +118,9 @@ describe('index.html structure', () => {
       priceInput.value = '15000'
       daysInput.dispatchEvent(new dom.window.Event('input'))
 
-      expect(breakdownEl.innerHTML).toContain('30 mudd')
-      expect(breakdownEl.innerHTML).toContain('337.500')
+      // Linear: 10 × 2 = 20 mudds, 20 × 0.75 = 15 kg, 15 × 15000 = 225000
+      expect(breakdownEl.innerHTML).toContain('20 mudd')
+      expect(breakdownEl.innerHTML).toContain('225.000')
     })
   })
 
