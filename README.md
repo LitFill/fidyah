@@ -1,3 +1,9 @@
+# ⚠️ AI-GENERATED PROJECT
+
+**This project was created with LLM agents (AI-assisted development). Use at your own discretion.**
+
+---
+
 # Kalkulator Fidyah
 
 [![GitHub Pages](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-blue)](https://litfill.github.io/fidyah/)

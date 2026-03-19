@@ -1,5 +1,7 @@
 # Project Claude
 
+> ⚠️ **Warning**: This project was created with LLM agents (AI-assisted development). Religious calculations should be verified with qualified scholars.
+
 ## Design Context
 
 ### Users
